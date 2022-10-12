@@ -21,9 +21,12 @@ function helloName(name) {
 console.log('Test - should say "Hello, Victor!', helloName('Victor'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
+  return (firstNumber + secondNumber);
+
 }
+console.log('Adding 2 Numbers, 23 & 12 -', addNumbers(23, 12));
 
 
 // 4. Function to multiply three numbers & return the result
