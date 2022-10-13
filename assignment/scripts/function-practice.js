@@ -69,15 +69,19 @@ console.log('Test - Checking if an empty Array will return "undefined"', getLast
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
 function find(value, array) {
   for (i = 0; i < array.length; i++) {
-    if (array[i] === value) {
+    if (value == array[i]) {
       return true;
-    } else if (array[i] != value) {
-      return false;
     }
   }
+  return false;
 }
+
+console.log('Test - [true]', find('wood', ['tree', 'feather', 'box', 'wood']));
+console.log('Test - [true]', find(9, [1, 3, 5, 7, 9]));
+console.log('Test - [false]', find('bear', [1, 2, 3, 'bird', 'box', 'plane']));
 
 // ----------------------
 // Stretch Goals
