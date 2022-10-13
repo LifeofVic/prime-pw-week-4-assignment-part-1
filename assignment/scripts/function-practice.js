@@ -61,7 +61,10 @@ function getLast(array) {
     return 'undefined';
   }
 }
-console.log('Test - returning the last item of the Array - :', getLast([12, 2, 3, 6, 7]));
+console.log('Test - returning the last item of the Array - [7] :', getLast([12, 2, 3, 6, 7])); //worked correctly
+
+console.log('Test - Checking if an empty Array will return "undefined"', getLast([])); //worked correctly
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
