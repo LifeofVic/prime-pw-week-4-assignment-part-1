@@ -72,7 +72,7 @@ console.log('Test - Checking if an empty Array will return "undefined"', getLast
 
 function find(value, array) {
   for (i = 0; i < array.length; i++) {
-    if (value == array[i]) {
+    if (value === array[i]) {
       return true;
     }
   }
