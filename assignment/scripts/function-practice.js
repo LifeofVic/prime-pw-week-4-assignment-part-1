@@ -163,4 +163,7 @@ function minMax(array) {
 
   return newArray;
 }
-console.log('TEST - finding minimum and maximum values of the given Array: ', minMax([13, 2, 10, 5]));
+console.log('TEST - finding MIN/MAX values of the given Array: ', minMax([13, 2, 10, 5]));
+console.log('TEST - finding MIN/MAX values of the given Array: ', minMax([1, 42, 105, 555]));
+console.log('TEST - finding MIN/MAX values of the given Array: ', minMax([9, 24, 310, 15]));
+console.log('TEST - finding MIN/MAX values of the given Array: ', minMax([53, 42, 910, 25]));
