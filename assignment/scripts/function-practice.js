@@ -107,12 +107,12 @@ function sumAll(array1) {
   }
   return sum;
 }
-let numArray1 = [1, 4, 6, 7, 8]  // total sum: 24
+let numArray1 = [1, 4, 6, 7, 8]  // total sum: 26
 let numArray2 = [1, 4, 6, 7, 8, 24]  // total sum: 50
 let numArray3 = [1, 4, 6, 7, -8]  // total sum: 10
 let numArray4 = [0, 4, 6, 7, -20]  // total sum: -3 
 
-console.log('Total sum of numArray1 is: [24]', sumAll(numArray1));  //worked
+console.log('Total sum of numArray1 is: [2]', sumAll(numArray1));  //worked
 console.log('Total sum of numArray2 is: [50]', sumAll(numArray2));  //worked
 console.log('Total sum of numArray3 is: [10]', sumAll(numArray3));  //worked
 console.log('Total sum of numArray4 is: [-3]', sumAll(numArray4));  //worked
@@ -136,7 +136,7 @@ function positivesOnly(array) {
 }
 
 console.log('Test - Only positive numbers in array: ', positivesOnly(randomNum));
-console.log('Test - Only positive numbers in array: ', positivesOnly([-1, -2, -3, -5, -6]));
+console.log('Test - Only negative numbers in array: ', positivesOnly([-1, -2, -3, -5, -6]));
 console.log('Test - Only positive numbers in array: ', positivesOnly([1, 2, 3, -4, -5, -6]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
@@ -144,11 +144,23 @@ console.log('Test - Only positive numbers in array: ', positivesOnly([1, 2, 3, -
 //     here in a comment, write the function, and test it!
 
 // Create a function that will interate through the array and set the low value and high value of the entire array into a new array.  [1,2,10,5] - - - > [1, 10]
-function minMax (array) {
-  let lowHigh = []
-  for (let i=0; i<array.length)
+function minMax(array) {
+  let lowHigh = [];
 
+  let min = [0];
+  let max = [0];
 
+  for (i = 0; i < array.length; i++) {
+    if (array[i] < array[i + 1]) {
+      min = array[i];
+    }
+    else if (array[i] < !array[i + 1]) {
+      max = array[i + 1];
+    }
+    lowHigh.push(min);
+    lowHigh.push(max);
 
-
+    return (lowHigh);
+  }
 }
+console.log('TEST - finding minimum and maximum values of the given Array: ', minMax([1, 2, 10, 5]));
