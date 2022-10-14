@@ -71,7 +71,7 @@ console.log('Test - Checking if an empty Array will return "undefined"', getLast
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 function find(value, array) {
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     if (value === array[i]) {
       return true;
     }
