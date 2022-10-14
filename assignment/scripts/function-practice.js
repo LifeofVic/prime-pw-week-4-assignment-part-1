@@ -112,17 +112,43 @@ let numArray2 = [1, 4, 6, 7, 8, 24]  // total sum: 50
 let numArray3 = [1, 4, 6, 7, -8]  // total sum: 10
 let numArray4 = [0, 4, 6, 7, -20]  // total sum: -3 
 
-console.log('Total sum of numArray1 is: [24]', sumAll(numArray1));
-console.log('Total sum of numArray2 is: [50]', sumAll(numArray2));
-console.log('Total sum of numArray3 is: [10]', sumAll(numArray3));
-console.log('Total sum of numArray4 is: [-3]', sumAll(numArray4));
+console.log('Total sum of numArray1 is: [24]', sumAll(numArray1));  //worked
+console.log('Total sum of numArray2 is: [50]', sumAll(numArray2));  //worked
+console.log('Total sum of numArray3 is: [10]', sumAll(numArray3));  //worked
+console.log('Total sum of numArray4 is: [-3]', sumAll(numArray4));  //worked
+console.log('Total sum of numArray5 is: [15]', sumAll([1, 2, 3, 4, 5])); //worked
+
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+let randomNum = [1, 4, -5, 0, 10]; //only positives are: [1, 4, 10]
 
+function positivesOnly(array) {
+  let positiveArray = [];
+
+  for (let number of array) {
+    if (number > 0) {
+      positiveArray.push(number);
+    }
+  } return positiveArray;
+}
+
+console.log('Test - Only positive numbers in array: ', positivesOnly(randomNum));
+console.log('Test - Only positive numbers in array: ', positivesOnly([-1, -2, -3, -5, -6]));
+console.log('Test - Only positive numbers in array: ', positivesOnly([1, 2, 3, -4, -5, -6]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+// Create a function that will interate through the array and set the low value and high value of the entire array into a new array.  [1,2,10,5] - - - > [1, 10]
+function minMax (array) {
+  let lowHigh = []
+  for (let i=0; i<array.length)
+
+
+
+
+}
