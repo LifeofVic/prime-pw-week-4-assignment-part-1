@@ -145,38 +145,22 @@ console.log('Test - Only positive numbers in array: ', positivesOnly([1, 2, 3, -
 
 // Create a function that will interate through the array and set the low value and high value of the entire array into a new array.  [1,2,10,5] - - - > [1, 10]
 function minMax(array) {
-  let lowHigh = [];
+  let newArray = [];
+  let min = array[0];
+  let max = array[0];
 
-  let min = [0];
-  let max = [0];
-
-  for (num of array) {
-    if (num < min) {
-      min = num;
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < min) {
+      min = array[i];
     }
-
-    for (num of array) {
-      if (num > max) {
-        max = num;
-      }
+    if (array[i] > max) {
+      max = array[i];
     }
-    lowHigh.push(min);
-    lowHigh.push(max);
-    return (lowHigh, 'value of min: ', min);
   }
 
+  newArray.push(min);
+  newArray.push(max);
 
-  // for (i = 0; i < array.length; i++) {
-  //   if (array[i] < array[i + 1]) {
-  //     min = array[i];
-  //   }
-  //   else {
-  //     max = array[i];
-  //   }
-
-  //   lowHigh.push(min);
-  //   lowHigh.push(max);
-
-  //   return (lowHigh);
+  return newArray;
 }
-console.log('TEST - finding minimum and maximum values of the given Array: ', minMax([1, 2, 10, 5]));
+console.log('TEST - finding minimum and maximum values of the given Array: ', minMax([13, 2, 10, 5]));
