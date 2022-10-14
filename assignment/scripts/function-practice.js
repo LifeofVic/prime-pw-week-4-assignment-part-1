@@ -150,17 +150,33 @@ function minMax(array) {
   let min = [0];
   let max = [0];
 
-  for (i = 0; i < array.length; i++) {
-    if (array[i] < array[i + 1]) {
-      min = array[i];
+  for (num of array) {
+    if (num < min) {
+      min = num;
     }
-    else if (array[i] < !array[i + 1]) {
-      max = array[i + 1];
+
+    for (num of array) {
+      if (num > max) {
+        max = num;
+      }
     }
     lowHigh.push(min);
     lowHigh.push(max);
-
-    return (lowHigh);
+    return (lowHigh, 'value of min: ', min);
   }
+
+
+  // for (i = 0; i < array.length; i++) {
+  //   if (array[i] < array[i + 1]) {
+  //     min = array[i];
+  //   }
+  //   else {
+  //     max = array[i];
+  //   }
+
+  //   lowHigh.push(min);
+  //   lowHigh.push(max);
+
+  //   return (lowHigh);
 }
 console.log('TEST - finding minimum and maximum values of the given Array: ', minMax([1, 2, 10, 5]));
